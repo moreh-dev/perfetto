@@ -169,6 +169,26 @@
   }
 }
 
+.moreh {
+  ul {
+    li.path {
+      list-style: none;
+      font-weight: 600;
+    }
+    li.file {
+      margin-left: 20px;
+      cursor: pointer;
+      &:hover {
+        color: #121212;
+      }
+    }
+  }
+  h2 {
+    font: inherit;
+    font-weight: bold;
+  }
+}
+
 .modal-pre {
   white-space: pre-line;
   font-size: 13px;

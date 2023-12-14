@@ -35,6 +35,7 @@ import {Animation} from './animation';
 import {downloadData, downloadUrl} from './download_utils';
 import {globals} from './globals';
 import {toggleHelp} from './help_modal';
+import {toggleMoreh} from './moreh_modal';
 import {
   isLegacyTrace,
   openFileWithLegacyTraceViewer,
@@ -135,6 +136,7 @@ const SECTIONS: Section[] = [
     summary: 'Open or record a new trace',
     expanded: true,
     items: [
+      {t: 'Open moreh file', a: popupFileSelectionMoreh, i: 'description'},
       {t: 'Open trace file', a: popupFileSelectionDialog, i: 'folder_open'},
       {
         t: 'Open with legacy UI',
@@ -288,7 +290,11 @@ function getFileElement(): HTMLInputElement {
   return assertExists(
       document.querySelector<HTMLInputElement>('input[type=file]'));
 }
-
+function popupFileSelectionMoreh(e: Event) {
+  // console.log('popupFileSelectionMoreh')
+  e.preventDefault();
+  toggleMoreh();
+}
 function popupFileSelectionDialog(e: Event) {
   e.preventDefault();
   delete getFileElement().dataset['useCatapultLegacyUi'];

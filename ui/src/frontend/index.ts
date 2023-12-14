@@ -141,6 +141,7 @@ function setupContentSecurityPolicy() {
       'https://*.googleusercontent.com',
       'https://www.googletagmanager.com',
       'https://*.google-analytics.com',
+      'https://sys2.moreh.dev',
     ],
     'object-src': ['none'],
     'connect-src': [
@@ -150,6 +151,8 @@ function setupContentSecurityPolicy() {
       'ws://127.0.0.1:8037',    // For the adb websocket server.
       'https://*.google-analytics.com',
       'https://*.googleapis.com',  // For Google Cloud Storage fetches.
+      'https://sysm2.moreh.dev/api/v2/dumpfiles',
+      'https://sys2.moreh.dev',
       'blob:',
       'data:',
     ],
@@ -160,6 +163,7 @@ function setupContentSecurityPolicy() {
       'https://*.google-analytics.com',
       'https://www.googletagmanager.com',
       'https://*.googleapis.com',
+      'https://sys2.moreh.dev',
     ],
     'style-src': [
       `'self'`,
